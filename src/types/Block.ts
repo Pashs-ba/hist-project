@@ -1,5 +1,5 @@
-import {IElement} from "./elements/IElement.ts";
+import {ReactElement} from "react";
 
 export class Block{
-    elements: IElement[];
+    elements: ReactElement[];
 }

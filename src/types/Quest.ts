@@ -1,6 +1,6 @@
 import {Block} from "./Block.ts";
 
-class Quest{
+export class Quest{
     blocks: {[key: string]: Block};
-    start: string;
+    public start: string;
 }
