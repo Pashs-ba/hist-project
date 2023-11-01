@@ -1,14 +1,22 @@
 import {Quest} from "../types/Quest.ts";
-import {Block} from "../types/Block.ts";
-import {TextElement} from "../types/Elements/TextElement.ts";
+import {Question} from "../types/Question.ts";
 
-export function GetQuests() {
+
+export function GetQuest() {
     return new Promise<Quest>( (resolve) => {
-        const quest = new Quest()
-        quest.blocks = {
-            "some": new Block([new TextElement("lorem", "some")])
-        }
-        quest.start = "some"
+        const quest = {
+            questions: [
+                {
+                    header: "Some",
+                    text: "Some long text",
+                    variantList: [
+                        {name: "1", text: "Not true", description: "I sayed"},
+                        {name: "2", text: "true", description: "Yepp"}
+                    ],
+                    trueAnswerNames: ["1"]
+                } as Question
+            ]
+        } as Quest
         resolve(quest)
     })
 }

@@ -1,6 +1,5 @@
-import {Block} from "./Block.ts";
+import {Question} from "./Question.ts";
 
-export class Quest{
-    blocks: {[key: string]: Block};
-    public start: string;
+export type Quest = {
+    questions: Question[]
 }
