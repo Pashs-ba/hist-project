@@ -12,11 +12,11 @@ export default function Text({resultProcessing, text, header}: {
             (this._header ?? <h1>{header}</h1>)
             <p>{text}</p>
             <button
-                onClick={_ => resultProcessing(new NextElement())}
+                onClick={() => resultProcessing(new NextElement())}
             >Next
             </button>
             <button
-                onClick={_ => resultProcessing(new PreviousElement())}
+                onClick={() => resultProcessing(new PreviousElement())}
             >Previous
             </button>
         </>
