@@ -3,6 +3,7 @@ import {Quest} from "../types/Quest.ts";
 import {GetQuest} from "../api/quests.ts";
 import QuestionElement from "../elements/QuestionElement.tsx";
 import Introduction from "../elements/Inroduction.tsx";
+import End from "../elements/End.tsx";
 
 export default function QuestPage() {
     const [quest, setQuest] = useState({questions: []} as Quest)
@@ -29,10 +30,19 @@ export default function QuestPage() {
                             {
                                 currentQuestion >= 0 && currentQuestion < quest.questions.length ? (
                                     <QuestionElement question={quest.questions[currentQuestion]}
-                                                     nextQuestion={()=>{setCurrentQuestion(currentQuestion+1)}}
-                                                     prevQuestion={()=>{setCurrentQuestion(currentQuestion-1)}}
+                                                     nextQuestion={() => {
+                                                         setCurrentQuestion(currentQuestion + 1)
+                                                     }}
+                                                     prevQuestion={() => {
+                                                         setCurrentQuestion(currentQuestion - 1)
+                                                     }}
                                     />
                                 ) : null
+                            }
+                            {
+                                currentQuestion >= quest.questions.length ?(
+                                    <End/>
+                                ): null
                             }
 
                         </div>
