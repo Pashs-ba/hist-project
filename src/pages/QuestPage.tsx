@@ -14,23 +14,32 @@ export default function QuestPage() {
         })
     }, [])
     return (
-        <>
-            {
-                quest.questions.length != 0 ? (
-                    <div className={"container"}>
-                        {currentQuestion < 0 ? <Introduction nextQuestion={() => {
-                            setCurrentQuestion(0)
-                        }}/> : null}
-                        {
-                            currentQuestion >= 0 && currentQuestion < quest.questions.length ? (
-                                <QuestionElement question={quest.questions[currentQuestion]}/>
-                            ) : null
-                        }
+        <div className={"container"}>
+            <div className={"row justify-content-center align-items-center full-height"}>
+                {
+                    quest.questions.length != 0 ? (
+                        <div className={"col-5 card p-3"}>
 
-                    </div>
-                ) : null
-            }
+                            {
+                                currentQuestion < 0 ?
+                                    <Introduction nextQuestion={() => {
+                                        setCurrentQuestion(0)
+                                    }}/> : null
+                            }
+                            {
+                                currentQuestion >= 0 && currentQuestion < quest.questions.length ? (
+                                    <QuestionElement question={quest.questions[currentQuestion]}
+                                                     nextQuestion={()=>{setCurrentQuestion(currentQuestion+1)}}
+                                                     prevQuestion={()=>{setCurrentQuestion(currentQuestion-1)}}
+                                    />
+                                ) : null
+                            }
 
-        </>
+                        </div>
+                    ) : null
+                }
+
+            </div>
+        </div>
     )
 }
