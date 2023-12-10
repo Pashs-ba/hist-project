@@ -19,3 +19,9 @@ img{
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 992px) {
+    .background-size{
+        background-position-x: 70%;
+    }
+}

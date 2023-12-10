@@ -1,26 +1,13 @@
+import "../../style/mainPage/title.css"
+
 export default function () {
     return (
         <>
-            <div className={"text-white fw-bold"}
-                 style={{
-                     fontSize: "64px",
-                     width: "37vw",
-                     marginLeft: "16vw",
-                     paddingTop: "26vh",
-                     marginBottom: "8vh",
-                 }}
+            <div className={"text-white fw-bold title"}
             >Городские квесты по Санкт-Петербургу
             </div>
             <button type="button"
-                    className="btn btn-primary"
-                    style={{
-                        borderRadius: "0.94rem",
-                        marginLeft: "16vw",
-                        paddingTop: "1rem",
-                        paddingBottom: "1rem",
-                        paddingLeft: "1.5rem",
-                        paddingRight: "1.5rem",
-                    }}
+                    className="btn btn-primary button-title"
             >
                 Выбрать квест
                 <i className="bi bi-arrow-down-right"

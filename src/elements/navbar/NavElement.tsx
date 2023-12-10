@@ -6,7 +6,7 @@ export default function ({text}: { text: string }) {
                 color: "white"
             }
         }
-             className={"mx-5"}
+             className={"col-4 px-5"}
         >
             {text}
         </div>

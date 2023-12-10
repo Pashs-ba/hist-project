@@ -18,8 +18,8 @@ export default function (){
                         участник ощутил дух приключения и впитал атмосферу Санкт-Петербурга.
                     </div>
                 </div>
-                <div className="col-lg-6">
-                    <img alt={"Simple image"} src={SimpleImage}/>
+                <div className="col-lg-6 d-flex justify-content-center ">
+                    <img alt={"Simple image"} src={SimpleImage} className={"overflow-x-hidden"}/>
                 </div>
 
             </div>

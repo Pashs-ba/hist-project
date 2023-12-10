@@ -4,7 +4,7 @@ import Pluses from "../elements/mainPage/Pluses.tsx";
 
 export default function HomePage() {
     return (
-        <div className={"full-height"}
+        <div className={"full-height background-size"}
              style={{
                  backgroundImage: `url(${ImageHome}`,
                  backgroundRepeat: "no-repeat",

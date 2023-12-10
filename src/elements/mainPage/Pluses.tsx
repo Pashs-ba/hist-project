@@ -7,13 +7,13 @@ export default function (){
             <Description/>
             <div className={""}
                  style={{
-                     marginTop: "7.5rem"
+                     marginTop: "7.5rem",
                  }}
             >
                 <div className="fs-2 fw-bold text-center mb-5">
                     Наши преимущества
                 </div>
-                <div className="row gx-5 gy-3">
+                <div className="row gx-lg-5 gy-lg-3">
                     <PlusCard
                         title={"Уникальность"}
                         text={"Наш сайт предлагает широкий выбор уникальных и захватывающих тематических квестов. Мы стремимся предложить нестандартные сценарии для вашей прогулки, чтобы она превратилась в яркое приключение и подарила вам много положительных эмоций"}
