@@ -8,11 +8,16 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import './style/style.css';
 import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap-icons/font/bootstrap-icons.css"
+import {Provider} from "react-redux";
+import store from "./store/store.ts";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <BrowserRouter>
-            <AppRoutes/>
-        </BrowserRouter>
+        <Provider store={store}>
+            <BrowserRouter>
+                <AppRoutes/>
+            </BrowserRouter>
+        </Provider>
     </React.StrictMode>,
 )

@@ -1,7 +1,16 @@
+import ImageHome from "../assets/image-home.png"
+import Title from "../elements/mainPage/Title.tsx";
+import Pluses from "../elements/mainPage/Pluses.tsx";
+
 export default function HomePage() {
     return (
-        <div className={"container"}>
-            <h1>It works</h1>
+        <div className={"full-height"}
+             style={{
+                 backgroundImage: `url(${ImageHome}`,
+                 backgroundRepeat: "no-repeat",
+             }}>
+            <Title/>
+            <Pluses/>
         </div>
 
     )
