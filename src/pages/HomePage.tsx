@@ -4,9 +4,10 @@ import Pluses from "../elements/mainPage/Pluses.tsx";
 import Description from "../elements/mainPage/Description.tsx";
 import {lazy, Suspense} from "react";
 import Loading from "../elements/Loading.tsx";
+import ReviewsBlock from "../elements/mainPage/ReviewsBlock/ReviewsBlock.tsx";
 
 export default function HomePage() {
-    const QuestSelection = lazy(() => import("../elements/mainPage/QuestCard/QuestSelection.tsx"))
+    const QuestSelection = lazy(() => import("../elements/mainPage/QuestSelection/QuestSelection.tsx"))
     return (
         <div className={"full-height background-size"}
              style={{
@@ -19,6 +20,9 @@ export default function HomePage() {
                 <Pluses/>
                 <Suspense fallback={<Loading/>}>
                     <QuestSelection/>
+                </Suspense>
+                <Suspense fallback={<Loading/>}>
+                    <ReviewsBlock/>
                 </Suspense>
 
             </div>
