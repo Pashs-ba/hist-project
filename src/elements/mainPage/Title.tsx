@@ -6,8 +6,9 @@ export default function () {
             <div className={"text-white fw-bold title"}
             >Городские квесты по Санкт-Петербургу
             </div>
-            <button type="button"
-                    className="btn btn-primary button-title"
+            <a
+                href={"#quests"}
+                className="btn btn-primary button-title"
             >
                 Выбрать квест
                 <i className="bi bi-arrow-down-right"
@@ -15,7 +16,7 @@ export default function () {
                        marginLeft: "4rem",
                    }}
                 ></i>
-            </button>
+            </a>
         </>
     )
 }

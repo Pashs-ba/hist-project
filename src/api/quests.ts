@@ -1,22 +1,22 @@
-import {Quest} from "../types/Quest.ts";
-import {Question} from "../types/Question.ts";
-
-
-export function GetQuest() {
-    return new Promise<Quest>( (resolve) => {
-        const quest = {
-            questions: [
-                {
-                    header: "Some",
-                    text: "Some long text",
-                    variantList: [
-                        {name: "1", text: "Not true", description: "I sayed"},
-                        {name: "2", text: "true", description: "Yepp"}
-                    ],
-                    trueAnswerNames: ["1"]
-                } as Question
-            ]
-        } as Quest
-        resolve(quest)
-    })
+import BlueTest from "../assets/blue2.png"
+import Eat from "../assets/Food.png"
+export async function GetQuestDescription(): Promise<QuestDescription[]> {
+    return [
+        {
+            imageUrl: BlueTest,
+            header: "Тайны синей ветки: ключ к загадкам метрополитена",
+            time: "60 мин",
+            places: "7 станций метро",
+            start_point: "станция метро “Электросила”",
+            fires: 2
+        },
+        {
+            imageUrl: Eat,
+            header: "Гастрономический квест по Санкт-Петербургу",
+            time: "60 мин",
+            places: "6 ключевых точек",
+            start_point: "Дворцовая набережная",
+            fires: 1
+        },
+    ]
 }

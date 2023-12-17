@@ -1,8 +1,12 @@
 import ImageHome from "../assets/image-home.png"
 import Title from "../elements/mainPage/Title.tsx";
 import Pluses from "../elements/mainPage/Pluses.tsx";
+import Description from "../elements/mainPage/Description.tsx";
+import {lazy, Suspense} from "react";
+import Loading from "../elements/Loading.tsx";
 
 export default function HomePage() {
+    const QuestSelection = lazy(() => import("../elements/mainPage/QuestCard/QuestSelection.tsx"))
     return (
         <div className={"full-height background-size"}
              style={{
@@ -10,7 +14,14 @@ export default function HomePage() {
                  backgroundRepeat: "no-repeat",
              }}>
             <Title/>
-            <Pluses/>
+            <div className="container">
+                <Description/>
+                <Pluses/>
+                <Suspense fallback={<Loading/>}>
+                    <QuestSelection/>
+                </Suspense>
+
+            </div>
         </div>
 
     )
