@@ -4,7 +4,7 @@ import Loading from "../../Loading.tsx";
 import QuestCard from "./QuestCard.tsx";
 
 export default function () {
-    const [questList, setQuestList] = useState([] as QuestDescription[]);
+    const [questList, setQuestList] = useState([] as ShortQuestDescription[]);
     useEffect(() => {
         GetQuestDescription().then((result) => {
             setQuestList(result)

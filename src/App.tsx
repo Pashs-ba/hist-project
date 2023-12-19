@@ -1,4 +1,4 @@
-import {Outlet} from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 import Logo from "./assets/Logo.svg"
 
 function App() {
@@ -6,9 +6,9 @@ function App() {
         <>
             <nav className="navbar navbar-expand-lg bg-primary navbar-dark">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
+                    <Link className="navbar-brand" to={"/"}>
                         <img alt={"logo"} src={Logo}/>
-                    </a>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">

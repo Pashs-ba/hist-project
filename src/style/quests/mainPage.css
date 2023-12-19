@@ -1,0 +1,9 @@
+.central-block {
+    margin: 7rem 28.8rem;
+}
+
+@media (max-width: 992px) {
+    .central-block {
+        margin: 2rem 0;
+    }
+}
