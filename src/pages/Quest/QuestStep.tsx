@@ -28,13 +28,22 @@ export default function () {
                 }
                 <div className="mt-5 fw-bold fs-5 text-center">{GetQuestion()?.question}</div>
                 {
-                    showHint && GetQuestion()?.hints ? (
+                    showHint ? (
                         <>
                             <div className={"mt-5 fw-bold fs-5 text-center"}> К сожалению ваш ответ неверный, попробуйте
                                 еще раз
                             </div>
-                            <div className={"fw-bold fs-5 text-center"}><i className={"bi bi-lightbulb me-3"}></i>Подсказка:</div>
-                            <div className=" text-center"> {GetQuestion()?.hints}</div>
+                            {
+                                GetQuestion()?.hints ? (
+                                    <>
+                                        <div className={"fw-bold fs-5 text-center"}><i
+                                            className={"bi bi-lightbulb me-3"}></i>Подсказка:
+                                        </div>
+                                        <div className=" text-center"> {GetQuestion()?.hints}</div>
+                                    </>
+                                ) : null
+                            }
+
                         </>
                     ) : null
                 }

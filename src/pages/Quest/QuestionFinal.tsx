@@ -43,7 +43,7 @@ export default function () {
                     if (Number(step) +1 === quest?.questions.length) {
                         navigate(`/quest/self/${id}/final`)
                     } else {
-                        navigate(`/quest/self/${id}/${Number(step) +1}`)
+                        navigate(`/quest/self/${id}/${Number(step) +1}/question`)
                     }
                 }}>{Number(step) +1 === quest?.questions.length? "Закончить": "Следующяя точка"}</button>
             </div>
