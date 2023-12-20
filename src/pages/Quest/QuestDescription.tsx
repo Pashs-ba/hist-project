@@ -1,12 +1,13 @@
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {LongQuestDescription} from "../types/LongQuestDescription.ts";
-import {GetQuestLongDescription} from "../api/quests.ts";
-import DescriptionElement from "../elements/mainPage/QuestDescription/DescriptionElement.tsx";
-import RedirectButton from "../elements/RedirectButton.tsx";
-import "../style/quests/mainPage.css"
+import {LongQuestDescription} from "../../types/LongQuestDescription.ts";
+import {GetQuestLongDescription} from "../../api/quests.ts";
+import DescriptionElement from "../../elements/mainPage/QuestDescription/DescriptionElement.tsx";
+import RedirectButton from "../../elements/RedirectButton.tsx";
+import "../../style/quests/mainPage.css"
 export default function () {
     const [questDescription, setQuestDescription] = useState({} as LongQuestDescription)
+    const navigate = useNavigate();
     let {id} = useParams();
     useEffect(() => {
         GetQuestLongDescription(id ? id : "").then((res) => {
@@ -51,6 +52,7 @@ export default function () {
                 </div>
                 <div className={"my-5 text-center d-flex justify-content-center"}>
                     <RedirectButton text={"Пройти квест"} onClick={() => {
+                        questDescription.link[0] === "/" ? navigate(questDescription.link) : window.open(questDescription.link)
                     }}/>
                 </div>
                 <div className={"mt-4 fw-bolder fs-4"}>
