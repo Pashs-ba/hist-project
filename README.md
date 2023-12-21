@@ -1,2 +1,2 @@
-# Quest Generator
+# History Project
 Special for itmo history
