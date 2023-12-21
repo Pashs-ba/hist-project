@@ -58,7 +58,7 @@ export default function () {
                         <button className={"btn btn-primary btn-lg"} onClick={() => {
                             let trueAnswers = GetQuestion()?.trueAnswer;
                             trueAnswers = trueAnswers ? trueAnswers : [];
-                            if (answer != undefined && trueAnswers.includes(answer)) {
+                            if (answer != undefined && trueAnswers.includes(answer.toLowerCase())) {
                                 navigate(`/quest/self/${id}/${step}/final`)
                             } else {
                                 setShowHint(true)

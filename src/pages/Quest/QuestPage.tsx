@@ -12,7 +12,7 @@ export default function () {
 
     return (
         <div className={"full-height d-flex flex-column justify-content-center align-items-center"}>
-            <div className={"fw-bold fs-2 mb-3"}>{quest.name}</div>
+            <div className={"fw-bold fs-2 mb-3 text-center"}>{quest.name}</div>
             {
                 quest.startInstructions ?
                     <div>{quest.startInstructions}</div> :
