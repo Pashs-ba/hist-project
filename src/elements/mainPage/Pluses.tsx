@@ -7,6 +7,7 @@ export default function () {
              style={{
                  marginTop: "7.5rem",
              }}
+
         >
             <div className="fs-2 fw-bold text-center mb-5">
                 Наши преимущества

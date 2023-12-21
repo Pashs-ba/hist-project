@@ -5,7 +5,9 @@ export default function (){
             <div className={"row"}
                  style={{
                      marginTop: "28rem"
-                 }}>
+                 }}
+                 id={"description"}
+            >
                 <div className={"col-lg-6 text-center"}>
                     <div className="fs-2 mb-3 fw-bold">
                         О нашем проекте

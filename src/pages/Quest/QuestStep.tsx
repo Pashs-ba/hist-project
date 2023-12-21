@@ -48,13 +48,13 @@ export default function () {
                     ) : null
                 }
                 <div className="row mt-5">
-                    <div className="col-10">
+                    <div className="col-lg-10">
                         <input className={"form-control form-control-lg"}
                                type={"text"}
                                value={answer}
                                onChange={e => setAnswer(e.target.value)}/>
                     </div>
-                    <div className="col-2 text-center">
+                    <div className="col-lg-2 text-center mt-5 mt-lg-0">
                         <button className={"btn btn-primary btn-lg"} onClick={() => {
                             let trueAnswers = GetQuestion()?.trueAnswer;
                             trueAnswers = trueAnswers ? trueAnswers : [];

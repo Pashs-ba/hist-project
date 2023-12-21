@@ -15,7 +15,9 @@ export default function () {
              style={{
                  marginTop: "7.5rem",
                  backgroundColor: "#CFE2FF"
-             }}>
+             }}
+             id={"reviews"}
+        >
             <div className={"py-4 fs-2 fw-bold text-center "}>
                 Впечатления наших участников
             </div>

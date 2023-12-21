@@ -6,9 +6,7 @@ export default function ({title, text, icon, isDark = false}: {
     isDark?: boolean
 }) {
     return (
-        <div className={"col-lg-4 px-3 mb-lg-0 mb-3"} style={{
-            flexGrow: 1
-        }}>
+        <div className={"col-lg-4 px-3 mb-lg-0 mb-3"}>
             <div className=" d-flex flex-column align-items-center h-100"
                  style={{
                      backgroundColor: isDark ? "#9EC5FE" : "#CFE2FF",

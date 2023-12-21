@@ -24,8 +24,10 @@ export default function () {
                     questList.length == 0 ? <Loading/> :
                         questList.map((el, index) => {
                             return (
-                                <div className={"col-lg-4"}
-                                     key={index}>
+                                <div className={"col-lg-4 "}
+                                     key={index}
+
+                                >
                                     <QuestCard el={el}/>
                                 </div>
                             )

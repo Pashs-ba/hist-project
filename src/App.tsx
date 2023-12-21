@@ -1,4 +1,5 @@
 import {Link, Outlet} from "react-router-dom";
+import {HashLink} from "react-router-hash-link";
 import Logo from "./assets/Logo.svg"
 
 function App() {
@@ -17,13 +18,13 @@ function App() {
                     <div className="collapse navbar-collapse d-lg-flex justify-content-center align-items-center" id="navbarSupportedContent">
                         <ul className="navbar-nav mb-2 mb-lg-0">
                             <li className="nav-item mx-5">
-                                <a className="nav-link active fw-bold fs-5" aria-current="page" href="#">О проекте</a>
+                                <HashLink className="nav-link active fw-bold fs-5" aria-current="page" to="/#description">О проекте</HashLink>
                             </li>
                             <li className="nav-item mx-5">
-                                <a className="nav-link active fw-bold fs-5" aria-current="page" href="#">Квесты</a>
+                                <HashLink className="nav-link active fw-bold fs-5" aria-current="page" to="/#quests">Квесты</HashLink>
                             </li>
                             <li className="nav-item mx-5">
-                                <a className="nav-link active fw-bold fs-5" aria-current="page" href="#">Отзывы</a>
+                                <HashLink className="nav-link active fw-bold fs-5" aria-current="page" to="/#reviews">Отзывы</HashLink>
                             </li>
                         </ul>
                     </div>
