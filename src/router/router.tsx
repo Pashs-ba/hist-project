@@ -11,13 +11,13 @@ import QuestFinal from "../pages/Quest/QuestFinal.tsx";
 export default function AppRoutes() {
     return (
         <Routes>
-            <Route path="/" element={<App/>}>
+            <Route path={"/"} element={<App/>}>
                 <Route index element={<HomePage/>}/>
-                <Route path={"/quest/:id"} element={<QuestDescription/>}/>
-                <Route path={"/quest/self/:id"} element={<QuestPage/>}/>
-                <Route path={"/quest/self/:id/final"} element={<QuestFinal/>}/>
-                <Route path={"/quest/self/:id/:step/question"} element={<QuestStep/>}/>
-                <Route path={"/quest/self/:id/:step/final"} element={<QuestionFinal/>}/>
+                <Route path={"quest/:id"} element={<QuestDescription/>}/>
+                <Route path={"quest/self/:id"} element={<QuestPage/>}/>
+                <Route path={"quest/self/:id/final"} element={<QuestFinal/>}/>
+                <Route path={"quest/self/:id/:step/question"} element={<QuestStep/>}/>
+                <Route path={"quest/self/:id/:step/final"} element={<QuestionFinal/>}/>
                 <Route path={"*"} element={<Page404/>}/>
             </Route>
         </Routes>
